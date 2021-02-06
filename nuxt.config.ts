@@ -2,7 +2,8 @@ import { NuxtConfig } from "@nuxt/types";
 import { Options as VuetifyOptions } from "@nuxtjs/vuetify"
 
 export default <NuxtConfig>{
-  target: "server",
+  ssr: true,
+  target: (process.env.TARGET || "server"),
 
   /*
   ** Headers of the page
