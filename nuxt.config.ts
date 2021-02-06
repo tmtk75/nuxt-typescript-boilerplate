@@ -1,47 +1,44 @@
 import { NuxtConfig } from "@nuxt/types";
-import { Options as VuetifyOptions } from "@nuxtjs/vuetify"
+import { Options as VuetifyOptions } from "@nuxtjs/vuetify";
 
 export default <NuxtConfig>{
   ssr: true,
-  target: (process.env.TARGET || "server"),
+  target: process.env.TARGET || "server",
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: 'nuxt-typescript-boilerplace',
+    title: "nuxt-typescript-boilerplace",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: "Nuxt.js project" }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
   /*
-  ** Customize the progress bar color
-  */
-  loading: { color: '#3B8070' },
+   ** Customize the progress bar color
+   */
+  loading: { color: "#3B8070" },
   /*
-  ** Build configuration
-  */
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
+   ** Build configuration
+   */
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/vuetify"],
   build: {
     /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
+     ** Run ESLint on save
+     */
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module?.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
-        })
+        });
       }
     }
   },
-  veutify: <VuetifyOptions>{
-  }
-}
+  veutify: <VuetifyOptions>{}
+};
