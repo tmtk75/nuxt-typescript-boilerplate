@@ -1,11 +1,14 @@
 import { NuxtConfig } from "@nuxt/types";
+import { Options as VuetifyOptions } from "@nuxtjs/vuetify"
 
 export default <NuxtConfig>{
+  // mode: "spa",
+
   /*
   ** Headers of the page
   */
   head: {
-    title: 'sample',
+    title: 'nuxt-typescript-boilerplace',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -22,7 +25,7 @@ export default <NuxtConfig>{
   /*
   ** Build configuration
   */
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
   build: {
     /*
     ** Run ESLint on save
@@ -37,6 +40,7 @@ export default <NuxtConfig>{
         })
       }
     }
+  },
+  veutify: <VuetifyOptions>{
   }
 }
-

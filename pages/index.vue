@@ -19,6 +19,7 @@
           class="button--grey">GitHub</a>
       </div>
     </div>
+    <v-btn color="primary">Vuetify Button</v-btn>
   </section>
 </template>
 
