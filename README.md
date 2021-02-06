@@ -1,16 +1,16 @@
 # Nuxt in TypeScript Boilerplate
 
-Development.
+Development (SPA).
 ``` bash
 $ yarn && yarn dev
 ```
 
-Build for production.
+Build for production (SSR).
 ```
 $ yarn build && yarn start
 ```
 
-Full static.
+Full static generate (SSG).
 ```bash
-$ yarn generate
+$ yarn generate && yarn serve
 ```

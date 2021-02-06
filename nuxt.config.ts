@@ -2,7 +2,7 @@ import { NuxtConfig } from "@nuxt/types";
 import { Options as VuetifyOptions } from "@nuxtjs/vuetify"
 
 export default <NuxtConfig>{
-  // mode: "spa",
+  target: "server",
 
   /*
   ** Headers of the page
