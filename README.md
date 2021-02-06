@@ -6,7 +6,7 @@ $ yarn && yarn dev
 ```
 
 Build for production (SSR).
-```
+```bash
 $ yarn build && yarn start
 ```
 
