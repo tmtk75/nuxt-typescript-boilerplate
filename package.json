@@ -1,7 +1,7 @@
 {
   "name": "nuxt-typescript-boilerplate",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "description": "Nuxt in TypeScript with Vuetify boilerplate.",
   "author": "tmtm75",
   "private": false,
   "scripts": {

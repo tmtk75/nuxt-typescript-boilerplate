@@ -21,6 +21,7 @@
       </div>
     </div>
     <v-btn color="primary">Vuetify Button</v-btn>
+    <nuxt-link to="/sample">sample</nuxt-link>
   </section>
 </template>
 
