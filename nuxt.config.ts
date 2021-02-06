@@ -1,4 +1,6 @@
-module.exports = {
+import { NuxtConfig } from "@nuxt/types";
+
+export default <NuxtConfig>{
   /*
   ** Headers of the page
   */
@@ -25,9 +27,9 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config: any, { isDev, isClient }: any) {
+    extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
-        config.module.rules.push({
+        config.module?.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
